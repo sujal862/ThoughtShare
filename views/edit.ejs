@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post - ThoughtShare</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <div class="form-header">
+            <h1>Edit Post</h1>
+        </div>
+
+        <div class="post-meta">
+            <span><strong>Post ID:</strong> <%=post.id%></span>
+            <span><strong>Author:</strong> @<%=post.username%></span>
+        </div>
+        
+        <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+            <div class="form-group">
+                <label for="content">Edit Your Post</label>
+                <textarea 
+                    id="content"
+                    class="form-control" 
+                    name="content" 
+                    rows="6"
+                    required
+                ><%=post.content%></textarea>
+                <div class="character-count">0/1000 characters</div>
+            </div>
+
+            <div class="form-footer">
+                <a href="/posts" class="btn-secondary">Cancel</a>
+                <button class="btn-primary">Update Post</button>
+            </div>
+        </form>
+    </div>
+
+    <script>
+        // Character count functionality
+        const textarea = document.querySelector('textarea');
+        const charCount = document.querySelector('.character-count');
+        
+        function updateCharCount() {
+            const remaining = textarea.value.length;
+            charCount.textContent = `${remaining}/1000 characters`;
+        }
+
+        textarea.addEventListener('input', updateCharCount);
+        // Initial count
+        updateCharCount();
+    </script>
+</body>
+</html>
