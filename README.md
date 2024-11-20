@@ -16,6 +16,17 @@ ThoughtShare is a simple yet elegant web application that allows users to share 
 - EJS Templates
 - CSS3
 
+- ## 📸 Screenshots
+
+![Home Page](assets/Home.png)
+*Home page displaying all thoughts*
+
+![Create Post](assets/create.png)
+*Create new post interface*
+
+![Edit Post](assets/Edit.png)
+*Edit post*
+
 ## 📦 Installation
 
 1. Clone the repository:
