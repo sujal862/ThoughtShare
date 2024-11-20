@@ -102,5 +102,8 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## 📧 Contact
 
+- Github - [sujal862](https://github.com/sujal862)
+- LinkedIn - [Sujal Raj](https://www.linkedin.com/in/sujal-raj/)
+
 
 
